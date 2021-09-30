@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>وانەکان</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-toggle menu="end">
+        <ion-button fill="clear" shape="round">
+          <ion-icon slot="icon-only" name="grid-outline"></ion-icon>
+        </ion-button>
+
+      </ion-menu-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <!-- ********************* segment buttons ************************************************** -->
+
+  <div>
+    <ion-segment *ngIf="channel1" color="primary" scrollable value="UCtl99ZlC0VHb6-voQJqhpDg" mode="ios"
+      (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="UCtl99ZlC0VHb6-voQJqhpDg">
+        <ion-label>{{channel1?.snippet?.title}}</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="UCMXEF8afYk7QOQonGzge37w">
+        <ion-label>{{channel2?.snippet?.title}}</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="UCJkuMmquy3763MjrMUIW82Q">
+        <ion-label>{{channel3?.snippet?.title}}</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <!-- ********************* spinner ************************************************** -->
+
+  <div *ngIf="showSpinner1">
+    <app-spinner>
+
+    </app-spinner>
+  </div>
+
+  <!-- ********************* list ************************************************** -->
+  <div *ngIf="!showSpinner1">
+    <ion-list>
+      <ion-item button detail="false" *ngFor="let play of playlists" (click)="onPlaylistOpen(play.id)">
+        <ion-thumbnail slot="start">
+          <img [src]="play.snippet.thumbnails?.default?.url" />
+        </ion-thumbnail>
+        <div class="item-container">
+          <h5>{{play.snippet.title}}</h5>
+
+          <div style="height: fit-content;">
+            <ion-badge color="primary">{{play.contentDetails.itemCount }}
+              وانە
+            </ion-badge>
+          </div>
+
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll threshold=" 25%" [disabled]="false" position="bottom" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more playlist...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+
+</ion-content>

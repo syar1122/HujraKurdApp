@@ -1,0 +1,48 @@
+.toolbar {
+    position: relative;
+    background-color: var(--ion-color-primary);
+
+    ion-toolbar {
+        position: absolute;
+        top: 0px;
+    }
+}
+
+ion-header {
+    border: 0px;
+    box-shadow: none;
+}
+
+ion-item {
+    --border-color: var(--ion-color-primary);
+
+    ion-icon {
+        color: var(--ion-color-primary);
+    }
+}
+
+h2 {
+    font-family: 'UniQAIDAR_ALI';
+    text-align: center;
+}
+
+li {
+    font-size: large;
+    font-family: 'UniQAIDAR_ALI';
+}
+
+p {
+    line-height: 1.6;
+    font-size: 24px;
+    font-family: "UniQAIDAR_MOBILE_TV";
+    padding: 10px;
+}
+
+ul {
+    margin: 0px;
+    padding: 10px 20px 0 0;
+
+    li {
+        padding: 15px;
+    }
+}

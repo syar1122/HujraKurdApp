@@ -1,0 +1,103 @@
+// title design ++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+.title {
+  margin: 10px 0px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ion-color-primary);
+  width: fit-content;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  ion-label {
+
+    font-size: medium;
+    color: white;
+    font-family: "UniQAIDAR_ALI";
+  }
+}
+
+// new video slides ++++++++++++++++++++++++++++++++++++++++++
+
+.newV {
+  width: 100%;
+  margin: 10px 0px;
+}
+
+
+.slider {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.slider div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Unikurd Digital";
+  line-height: 0.8em;
+}
+
+.slider ion-card {
+  margin: 2px 2px;
+}
+
+ion-slide {
+  .empty {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    background-color: var(--ion-color-primary);
+    opacity: 0.5;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+.EmptySlide {
+  ion-label {
+    padding: auto;
+    font-size: xx-large;
+    color: var(--ion-color-secondary-contrast);
+  }
+}
+
+// card img design ++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+.cards ion-img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+}
+
+img {
+  border-radius: 10px;
+}
+
+.ripple-parent {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+ion-card.cards {
+  margin: 5px 10px;
+}

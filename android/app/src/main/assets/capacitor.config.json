@@ -1,0 +1,28 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "Hujray Kurdstan",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {
+    "preferences": {
+      "ScrollEnabled": "false",
+      "YouTubeDataApiKey": "AIzaSyBLBWmxsa-P2hlLdLlQfHXMJaPybKpTiz4",
+      "android-minSdkVersion": "22",
+      "BackupWebStorage": "none",
+      "SplashMaintainAspectRatio": "true",
+      "AutoHideSplashScreen": "true",
+      "FadeSplashScreenDuration": "300",
+      "SplashShowOnlyFirstTime": "true",
+      "SplashScreen": "screen",
+      "ShowSplashScreenSpinner": "true",
+      "SplashScreenSpinnerColor": "white",
+      "SplashScreenDelay": "3000"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Hujray Kurdstan",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

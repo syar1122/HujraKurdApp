@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>زانستەکان</ion-title>
+
+    <ion-buttons slot="primary">
+
+      <img src="../../../assets/icon/logo.png" alt="" style="width: 100px;">
+
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<div class="nav" *ngIf="labels">
+
+  <ion-menu-toggle menu="z-menu" *ngFor="let label of labels" auto-hide="false">
+    <div class="nav-item" [routerLink]="['/sections' , label.id]" routerLinkActive="active">
+      <ion-icon class="icon" slot="start" name="book"></ion-icon>
+      <ion-label class="title">{{ label.title }}</ion-label>
+
+
+    </div>
+    <span class="divider"></span>
+  </ion-menu-toggle>
+
+
+</div>

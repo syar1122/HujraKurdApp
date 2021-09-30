@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "194323244336",
+    "firebase_url": "https://hujrakurdstan.firebaseio.com",
+    "project_id": "hujrakurdstan",
+    "storage_bucket": "hujrakurdstan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194323244336:android:a4966def389c0873bb54f5",
+        "android_client_info": {
+          "package_name": "syar.hujra.ionic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194323244336-mrm9cuvpn7bf5gcmbck0iaknlk0jkn8o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk3VaMGzYAQrhjMXkdbcWRKzifGBCQs14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194323244336-mrm9cuvpn7bf5gcmbck0iaknlk0jkn8o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "194323244336-ah0e6up3qvj9t3fk463fhoqt3rpl3irv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "syar.hujra.ionic"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

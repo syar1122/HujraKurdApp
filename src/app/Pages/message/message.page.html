@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>ئاگاداری</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-toggle menu="end">
+        <ion-button fill="clear" shape="round">
+          <ion-icon slot="icon-only" name="grid-outline"></ion-icon>
+        </ion-button>
+
+      </ion-menu-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pullFactor="0.8" pullMin="60" pullMax="120">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+
+  <div *ngIf="!messages || messages.length === 0" style="width: 100%;text-align: center;">
+    <h4>هیچ ئاگادارییەک نەدۆزرایەوە !!!</h4>
+  </div>
+
+
+
+
+  <ion-grid *ngIf="messages && messages.length > 0" fixed>
+    <ion-row>
+
+
+      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let message of messages">
+        <ion-item lines="full" Style="width: 100%">
+          <ion-label class="ion-text-wrap">{{message.message}}</ion-label>
+
+          <ion-note>{{message.date.toDate() | date : 'short'}}</ion-note>
+        </ion-item>
+      </ion-col>
+
+
+
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

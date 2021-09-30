@@ -1,0 +1,55 @@
+<ion-header translucent="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      چەناڵەکان
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-toggle menu="end">
+        <ion-button fill="clear" shape="round">
+          <ion-icon slot="icon-only" name="grid-outline"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-card button="true" *ngFor="let channel of channels" class="container" (click)="openChannel(channel.id)">
+
+    <div class="upper-cont">
+      <ion-avatar>
+        <img [src]="channel?.snippet.thumbnails?.default.url" />
+      </ion-avatar>
+
+
+
+      <ion-card-title>{{channel?.snippet.title}}</ion-card-title>
+      <ion-card-subtitle>{{channel?.snippet.description}}</ion-card-subtitle>
+
+
+    </div>
+
+
+    <div class="lower-cont">
+      <div class="flex-sub">
+        <h5>Subscribers :</h5>
+        <h5>{{channel?.statistics.subscriberCount }}</h5>
+      </div>
+      <div class="flex-vid">
+        <h5>وانە :</h5>
+        <h5>{{channel?.statistics.videoCount }}</h5>
+      </div>
+    </div>
+
+
+
+  </ion-card>
+
+
+</ion-content>

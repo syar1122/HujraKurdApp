@@ -1,0 +1,52 @@
+<div class="header">
+  <div class="logo">
+    <ion-img src="../../../assets/icon/logo.png"></ion-img>
+  </div>
+</div>
+
+
+<div class="nav">
+  <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+    <div class="nav-item" [routerLink]="[p.url]">
+      <ion-icon class="icon" [name]="p.icon"></ion-icon>
+      <ion-label class="title">{{p.title}}</ion-label>
+    </div>
+    <span class="divider"></span>
+
+  </ion-menu-toggle>
+
+
+  <div class="nav-item" (click)="isLabelOpen = !isLabelOpen">
+    <ion-icon class="icon" name="arrow-forward" *ngIf="!isLabelOpen"></ion-icon>
+    <ion-icon class="icon" name="arrow-down" *ngIf="isLabelOpen"></ion-icon>
+    <ion-label class="title">زانستەکان</ion-label>
+  </div>
+  <span class="divider"></span>
+
+
+
+
+  <ion-menu-toggle auto-hide="false" *ngIf="labels && isLabelOpen">
+    <div class="sub-nav-item" *ngFor="let label of labels" [routerLink]="['/sections' , label.id]">
+      <ion-icon class="icon" slot="start" name="book"></ion-icon>
+      <ion-label class="title">{{ label.title }}</ion-label>
+      <span class="divider"></span>
+    </div>
+  </ion-menu-toggle>
+</div>
+
+<div class="footer">
+  <div class="footer-nav">
+    <h6>ئێمە لە سۆشیاڵ میدیا</h6>
+  </div>
+
+  <div class="footer-social">
+
+
+    <ion-icon (click)="openTelegramProfile()" name="navigate"></ion-icon>
+    <ion-icon (click)="openFacebookProfile()" name="logo-facebook"></ion-icon>
+    <ion-icon (click)="openYoutubeProfile()" name="logo-youtube"></ion-icon>
+  </div>
+
+
+</div>

@@ -1,0 +1,102 @@
+<head>
+
+  <link href="http://services.webchin.org/web-fonts/web-font?font=UniQAIDAR_Aso" rel="stylesheet" type="text/css">
+
+  <style>
+    * {
+      font-family: "UniQAIDAR_Aso";
+    }
+  </style>
+</head>
+
+<ion-header color="primary" #header>
+  <div class="toolbar">
+    <ion-toolbar color="primary" class="ion-no-border">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="m-menu"></ion-menu-button>
+      </ion-buttons>
+
+
+    </ion-toolbar>
+
+    <ion-img src="../../../assets/icon/logo.png" #img></ion-img>
+  </div>
+
+</ion-header>
+
+<ion-content [scrollEvents]="true" (ionScroll)="logScroll($event)" (ionScrollStart)="scrollStart(header)">
+
+
+  <h2>بسم الله الرحمن الرحيم
+    الحمدلله رب العالمين والصلاة والسلام على خير خلقه محمد وآله و صحبه أجمعين أما بعد:</h2>
+  <p>سەرەتا پیرۆزبایی لە خۆم و ھەموو خوێندکارەکانی زانستە شەرعیەکان دەکەم بە بۆنەی دروستکردنی ئەپێکی لەم شێوەیە بۆ
+    یەکەمجار .
+    پاش ھەست کردن بە لاوازی یوتوبی کوردی لە بواری عیلمە شەرعیەکاندا سوپاس بۆ خوا پاش ٤ ساڵ کارکردن توانيمان قۆناغێکی زۆر
+    باش ببڕین و کۆمەڵێک کتێب و وانەی زۆر دابنێین لە یوتوبی کەناڵەکەمان بە ناوی (حوجرەی کوردستان)، کە تا ئێستا کۆی ئەو
+    وانانەی ئەپڵۆدکراوە، گەشتووەتە ٦٦٦٠ وانە.
+    سوپاس بۆ خوا تا ئێستاش بەبەردەوامی وانە لەکەناڵەکەماندا ئەپڵۆد ئەکرێ، لەڕاستیدا مۆنتاج و ئەپڵۆدی یەک وانە، بە نزیکی
+    پێویستی بە ٢٠خولەک کارکردنە، بەڵام بە تەوفیقی ئیلاهی توانیمان ئەم خزمەتە بچووکە بکەین.
+    لەئێستادا ژمارەی ئەو کتێبانەی لەزانستەکاندا دامان ناون بەم شێوەیەن:
+  </p>
+  <ul>
+    <li>١- النحو : ٢٧ کتێب</li>
+    <li>٢- الصرف : ١٣ کتێب</li>
+    <li> ٣- الفقە : ١٤ کتێب</li>
+    <li> ٤- العقیدة : ٣ کتێب</li>
+    <li>٥- أصول الفقە : ٧ کتێب</li>
+    <li>٦-البلاغة : ٦ کتێب</li>
+    <li>٧- الوضع : ١ کتێب</li>
+    <li>٨- العروض : ٢ کتێب</li>
+    <li>٩- المنطق : ٣ کتێب</li>
+    <li>١٠-علم الحدیث : ٥ کتێب</li>
+  </ul>
+  <p>
+
+    ئەم کتێبانە ھەندێکیان بە شەرحی دوو مامۆستا یان زیاتر دامان ناون واتە دوبارەکانیشمان بە کتێبێک داناوە .
+    کارکردنمان مەنھەجی بووە ھەوڵمانداوە کام کتێبە لە حوجرەکاندا خوێندراوە ئەوانە بڵاو بکەینەوە خۆشحاڵانە زۆربەی کتێبە
+    باڵاکانی زانستەکانمان بڵاو کردۆتەوە لەنێویاندا : جمع الجوامع - مختصر المعاني - سیوطی - جامي - مغني اللبیب - تدریب
+    الراوي - تصریف الملا علي - شرح النظام - منھاج الطالبین - عبدالله یزدي.
+    وە ھەوڵمانداوە لەھەموو زانستەکاندا ئاستی سەرەتایی و ناوەندی و کۆتایی دابنێین بە شوکرانەی خوا سەرکەوتوو بووین .
+    پاش ئەم کارانە بۆ زیاتر پێشخستنی کارەکان و ئاسانکاری زیاتر ھەستاین بە دروستکردنی ئەپێک بە ناوی حوجرەی کوردستان بە
+    ئومێدی ئەوەی بتوانین خزمەتێکی زیاتر بە زانستەکان و خوێندکاران بکەین.
+    ولله الحمد والمنة.</p>
+  <ion-list lines="full">
+
+    <ion-item *ngIf="version">
+      <ion-icon slot="start" name="logo-vimeo"></ion-icon>
+      <ion-label>ڤێرژن : {{version}} </ion-label>
+    </ion-item>
+
+    <ion-item button (click)="openFB()">
+      <ion-icon slot="start" name="logo-facebook"></ion-icon>
+      <ion-label>ئێمە لە فەیسبوک</ion-label>
+    </ion-item>
+
+    <ion-item button (click)="openTL()">
+      <ion-icon slot="start" name="paper-plane"></ion-icon>
+      <ion-label>ئێمە لە تەلەگرام</ion-label>
+    </ion-item>
+
+    <ion-item button (click)="openYT()">
+      <ion-icon slot="start" name="logo-youtube"></ion-icon>
+      <ion-label>ئێمە لا یوتوب</ion-label>
+    </ion-item>
+
+    <a href="mailto:name@mail.com?subject=Report%20Hujra%20app">
+      <ion-item button>
+        <ion-icon slot="start" name="alert-circle"></ion-icon>
+        <ion-label>ڕیپۆرت لە کاتی کێشەدا.</ion-label>
+      </ion-item>
+    </a>
+
+
+    <!-- <ion-item button (click)="onContact()">
+      <ion-icon slot="start" name="call"></ion-icon>
+      <ion-label> پەیوەندی بە ئێمە</ion-label>
+    </ion-item> -->
+
+
+  </ion-list>
+
+
+</ion-content>

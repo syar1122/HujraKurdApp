@@ -1,0 +1,38 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu side="start" contentId="main-content" menu-id="m-menu" type="push">
+      <app-sidemenu></app-sidemenu>
+      <!-- <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header>Hujra</ion-list-header>
+          <ion-note>hi@ionicframework.com</ion-note>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="['/']" lines="none" detail="false">
+              <ion-icon slot="start" name="home-sharp"></ion-icon>
+              <ion-label>Home</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+
+        <ion-list id="labels-list">
+          <ion-list-header>Labels</ion-list-header>
+          <ion-menu-toggle auto-hide="false" *ngIf="labels">
+            <ion-item *ngFor="let label of labels" lines="none" routerDirection="root"
+              [routerLink]="['/sections' , label.id]">
+              <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+              <ion-label>{{ label.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content> -->
+    </ion-menu>
+
+    <ion-menu side="end" contentId="main-content" menu-id="z-menu" type="overlay">
+      <app-z-sidemenu></app-z-sidemenu>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  </ion-split-pane>
+</ion-app>

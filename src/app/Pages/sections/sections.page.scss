@@ -1,0 +1,26 @@
+.small {
+    font-size: x-small;
+    color: var(--ion-color-secondary);
+    margin: 0;
+    padding: 0;
+}
+
+.item-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+        font-size: medium;
+    }
+
+}
+
+.small-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}

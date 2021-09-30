@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>{{section.snippet.title}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-menu-toggle menu="end">
+        <ion-button fill="clear" shape="round">
+          <ion-icon slot="icon-only" name="grid-outline"></ion-icon>
+        </ion-button>
+
+      </ion-menu-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+  <!-- ************************* Spinner ******************************* -->
+  <div *ngIf="showSpinner">
+    <app-spinner>
+
+    </app-spinner>
+  </div>
+
+
+  <!-- *********************** All ******************************* -->
+  <div *ngIf="!showSpinner">
+    <ion-list>
+      <ion-item button detail="false" (click)="onPlaylistOpen(play.id)" *ngFor="let play of playlist">
+        <ion-thumbnail slot="start">
+          <img [src]="play?.snippet.thumbnails?.default?.url" [alt]="" />
+        </ion-thumbnail>
+        <div class="item-container">
+          <h4>{{play?.snippet.title}}</h4>
+
+
+          <div class="small-container">
+            <h6 class="small" style="flex-grow: 10;" cli>{{play?.snippet.channelTitle}}</h6>
+            <div style="height: fit-content;">
+              <ion-badge color="primary" style="font-size: xx-small;">{{play?.contentDetails.itemCount }}
+                وانە
+              </ion-badge>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

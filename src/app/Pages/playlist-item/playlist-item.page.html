@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-toggle menu="end">
+        <ion-button fill="clear" shape="round">
+          <ion-icon slot="icon-only" name="grid-outline"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <div *ngIf="showSpinner">
+    <app-spinner>
+
+    </app-spinner>
+  </div>
+
+  <div *ngIf="!showSpinner">
+
+    <ion-list *ngIf="videos">
+
+      <ion-card button="true" mode="ios" *ngFor="let video of videos"
+        (click)="playVideo(video?.snippet?.resourceId.videoId)">
+
+
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img [src]="video.snippet?.thumbnails?.medium?.url" [alt]="video.snippet?.title" />
+          </ion-thumbnail>
+          <div class="flex-item">
+            <h2 class="ion-text-wrap">{{video?.snippet.title}}</h2>
+            <div class="lower-flex">
+              <p>{{video.snippet?.channelTitle}}</p>
+              <p>{{video.snippet?.publishedAt | date:'mediumDate'}}</p>
+            </div>
+          </div>
+        </ion-item>
+      </ion-card>
+    </ion-list>
+
+    <ion-infinite-scroll threshold="25%" [disabled]="false" position="bottom" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more playlist...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>194323244336-ah0e6up3qvj9t3fk463fhoqt3rpl3irv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.194323244336-ah0e6up3qvj9t3fk463fhoqt3rpl3irv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD-XFJREEpcyW0ftEjeCoVdJkygL5xR3Lw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>194323244336</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>syar.hujra.ionic</string>
+	<key>PROJECT_ID</key>
+	<string>hujrakurdstan</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hujrakurdstan.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:194323244336:ios:bbf11d01bd2a002abb54f5</string>
+	<key>DATABASE_URL</key>
+	<string>https://hujrakurdstan.firebaseio.com</string>
+</dict>
+</plist>
